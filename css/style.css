@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+background-color: #d6a4c5;
+font-family: serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;
+}
+
+
+button{
+   background-color: #cd3e6e;
+   color: azure;
+   font-family: serif;
+   border: 0;
+   border-radius: 3px;
+   font-size: 16px;
+   cursor: pointer;
+   width: 120px;
+   height: 50px;
+   position: fixed;
+   top:20px;
+   letter-spacing: 2px;
+   padding: 0;
+   border: none;
+   position: absolute;
+   top: 10px;
+   box-shadow: 0 5px 5px  #85b744;
+   z-index: 100;
+}
+.magic:focus{
+   outline: none;
+}
+.magic:active {
+   box-shadow: none;
+   transform: rotateZ(3px);
+}
+.boxes{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   background-color: #d6a4c5;
+   height: 500px;
+   width: 500px;
+   position: relative;
+   transition: .4s ease;
+}
+.boxes.big {
+      height: 600px;
+      width: 600px;
+}
+.boxes.big .box {
+   transform: rotateZ(360deg);
+}
+.box{
+   background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/35a81079405023.5cc1d00e79ecd.gif');
+   background-repeat: no-repeat;
+   background-size: 500px 500px;
+   position: relative;
+   height: 125px;
+   width: 125px;
+   transition: .4s ease;
+}
+.box::after{
+   content: '';
+   background-color: #85b744;
+   position: absolute;
+   top:8px;
+   right: -15px;
+   height: 100%;
+   width: 15px;
+   transform: skewY(45deg);
+}
+.box::before {
+   content: '';
+   background-color: #8bbe48;
+   position: absolute;
+   bottom: -15px;
+   left: 8px;
+   height: 15px;
+   width: 100%;
+   transform: skewX(45deg);
+}
